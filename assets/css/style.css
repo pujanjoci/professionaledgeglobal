@@ -1137,7 +1137,7 @@ body.nav-active { overflow: hidden; }
    * FOOTER
    */
 
-  .footer .grid-list { grid-template-columns: repeat(4, 1fr); }
+  .footer .grid-list { grid-template-columns: repeat(3, 1fr); }
 
 }
 
