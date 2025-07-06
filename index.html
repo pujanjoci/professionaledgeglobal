@@ -303,17 +303,16 @@
       <!-- 
         - #CONTACT (implied by the Contact nav link)
       -->
-      <section id="contact" class="section contact" aria-labelledby="contact-label">
+    <section id="contact" class="section contact" aria-labelledby="contact-label">
   <div class="container">
     <p class="section-subtitle" id="contact-label">Get In Touch</p>
     <h2 class="h2 section-title">Contact Us</h2>
     
     <div class="contact-content">
-      <form class="contact-form" action="https://formsubmit.co/pujanjoci01@gmail.com" method="POST">
+      <form id="contactForm" class="contact-form">
         <input type="text" name="name" placeholder="Your Name" required class="input-field">
         <input type="email" name="email" placeholder="Email Address" required class="input-field">
         <textarea name="message" placeholder="Your Message" required class="input-field"></textarea>
-        <input type="hidden" name="_next" value="https://pujanjoci.github.io/professionaledgeglobal/thank-you.html">
         <button type="submit" class="btn btn-primary">Send Message</button>
       </form>
       
@@ -331,6 +330,12 @@
           +977 98-60000000
         </a>
       </div>
+    </div>
+
+    <!-- Thank you message (hidden by default) -->
+    <div id="thankYouMessage" style="display: none; text-align: center; margin-top: 30px;">
+      <h3>Thank You!</h3>
+      <p>We've received your message and will contact you soon.</p>
     </div>
   </div>
 </section>
@@ -463,6 +468,40 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+  <script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(this);
+    
+    // Send to FormSubmit
+    fetch('https://formsubmit.co/ajax/pujanjoci01@gmail.com', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(Object.fromEntries(formData))
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Show thank you message
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('thankYouMessage').style.display = 'block';
+      
+      // Optional: Scroll to thank you message
+      document.getElementById('thankYouMessage').scrollIntoView({ behavior: 'smooth' });
+      
+      // Reset form (optional)
+      this.reset();
+    })
+    .catch(error => {
+      alert('There was a problem sending your message. Please try again later.');
+      console.error('Error:', error);
+    });
+  });
+</script>
 
 </body>
 
