@@ -475,7 +475,10 @@ body.nav-active { overflow: hidden; }
 .hero .slider-btn.next { right: 20px; }
 
 
-
+/* Shift the entire slide down */
+.slider-item.shift-slide {
+  transform: translateY(50px); /* Adjust value as needed */
+}
 
 
 /*-----------------------------------*\
@@ -1074,7 +1077,7 @@ body.nav-active { overflow: hidden; }
   }
   
   .contact-info {
-    background: #2c3e50;
+    background: #01376c;
     color: white;
     padding: 40px;
     border-radius: 8px;
