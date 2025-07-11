@@ -493,8 +493,10 @@ body.nav-active { overflow: hidden; }
   padding: 40px;
   box-shadow: var(--shadow-2);
   border-radius: var(--radius-6);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
 }
 
+/* Card icon styling remains unchanged */
 .service-card .card-icon {
   width: 60px;
   height: 60px;
@@ -524,6 +526,18 @@ body.nav-active { overflow: hidden; }
 
 .service-card .btn-text:is(:hover, :focus-visible) { opacity: 0.9; }
 
+/* NEW: Hover effects on service cards */
+.service-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: var(--shadow-3); /* Add deeper shadow on hover */
+  background-color: var(--alice-blue); /* Light background tint on hover */
+}
+
+/* Optional: Slight icon animation on card hover */
+.service-card:hover .card-icon {
+  transform: rotate(30deg);
+  transition: transform 0.4s ease;
+}
 
 
 
@@ -1006,21 +1020,27 @@ body.nav-active { overflow: hidden; }
     padding: 0 20px;
   }
   
-  .section-subtitle {
-    color: #6c757d;
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-    display: block;
-  }
-  
-  .section-title {
-    color: #2c3e50;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 40px;
+.section-subtitle {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  display: block;
+  text-align: center; /* ✅ Add this line */
+}
+
+.section-title {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center; /* ✅ Add this line */
+}
+  .contact {
+    background-color: #548ee4;
+    padding: 60px 0;
   }
   
   .contact-content {
@@ -1042,7 +1062,7 @@ body.nav-active { overflow: hidden; }
   
   .input-field {
     padding: 15px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #b6aeae;
     border-radius: 4px;
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -1050,7 +1070,7 @@ body.nav-active { overflow: hidden; }
   
   .input-field:focus {
     outline: none;
-    border-color: #3498db;
+    border-color: #548ee4;
     box-shadow: 0 0 0 2px rgba(52,152,219,0.2);
   }
   
@@ -1060,7 +1080,7 @@ body.nav-active { overflow: hidden; }
   }
   
   .btn-primary {
-    background-color: #2c3e50;
+    background-color: #548ee4;
     color: white;
     padding: 15px 30px;
     border: none;
@@ -1072,12 +1092,12 @@ body.nav-active { overflow: hidden; }
   }
   
   .btn-primary:hover {
-    background-color: #1a252f;
+    background-color: #183652;
     transform: translateY(-2px);
   }
   
   .contact-info {
-    background: #01376c;
+    background: #173756;
     color: white;
     padding: 40px;
     border-radius: 8px;
@@ -1117,6 +1137,8 @@ body.nav-active { overflow: hidden; }
       font-size: 2rem;
     }
   }
+
+
   /**
    * CTA
    */
