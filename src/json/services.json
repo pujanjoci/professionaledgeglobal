@@ -1,0 +1,66 @@
+[
+  {
+     "id": "market-research",
+    "image_name": "div_1",
+    "title": "Market Research & Digital Marketing",
+    "description": "Comprehensive market analysis and digital strategies to grow your brand.",
+    "subDescription": "We provide end-to-end market intelligence including competitor benchmarking, customer behavior analysis, and industry trend forecasting. Our digital marketing services encompass SEO optimization, targeted social media campaigns, content marketing, and data-driven PPC strategies to maximize your online presence and ROI.",
+    "icon": "FiPieChart"
+  },
+  {
+     "id": "accounting-consulting",
+     "image_name": "div_2",
+    "title": "Accounting & Business Consulting",
+    "description": "Expert advice and accounting solutions for sustainable growth.",
+    "subDescription": "Our certified accountants deliver full-spectrum financial services including bookkeeping, financial reporting, and strategic business consulting. We help optimize your financial operations, improve cash flow management, and develop growth strategies tailored to your industry and business model.",
+    "icon": "FiBriefcase"
+  },
+  {
+     "id": "erp-implementation",
+     "image_name": "div_3",
+    "title": "ERP Support & Implementations",
+    "description": "Efficient ERP systems tailored to streamline your operations.",
+    "subDescription": "From needs assessment to post-implementation support, we provide complete ERP solutions including system selection, customization, data migration, and user training. We specialize in Odoo, SAP, and Microsoft Dynamics implementations that integrate seamlessly with your existing workflows.",
+    "icon": "FiSettings"
+  },
+  {
+     "id": "tax-advisory",
+     "image_name": "div_4",
+    "title": "Expert Tax Advisory",
+    "description": "Strategic tax planning and compliance to optimize your finances.",
+    "subDescription": "Our tax specialists offer proactive tax planning, compliance management, and audit support services. We stay current with global tax regulations to help you minimize liabilities, claim eligible deductions, and maintain full compliance across all jurisdictions where you operate.",
+    "icon": "FiDollarSign"
+  },
+  {
+     "id": "hr-outsourcing",
+     "image_name": "div_5",
+    "title": "HR Outsourcing & Capacity Development",
+    "description": "Customized HR solutions and training programs for workforce efficiency.",
+    "subDescription": "We deliver comprehensive HR solutions including recruitment process outsourcing, payroll management, performance evaluation systems, and leadership development programs. Our training initiatives focus on upskilling teams in emerging technologies, soft skills, and industry-specific competencies.",
+    "icon": "FiUsers"
+  },
+  {
+     "id": "corporate-legal-support",
+     "image_name": "div_6",
+    "title": "Corporate Legal Support",
+    "description": "Comprehensive legal assistance for smooth corporate operations.",
+    "subDescription": "Our legal team provides end-to-end corporate legal services including contract drafting and review, compliance management, intellectual property protection, and dispute resolution. We specialize in corporate governance, M&A support, and regulatory compliance across multiple industries.",
+    "icon": "FiFileText"
+  },
+  {
+     "id": "bpo-kpo-services",
+     "image_name": "div_7",
+    "title": "BPO / KPO Services",
+    "description": "Cost-effective outsourcing solutions to boost your business productivity.",
+    "subDescription": "We offer scalable business process and knowledge process outsourcing solutions including customer support, data processing, financial analysis, and research services. Our secure offshore/nearshore delivery models provide 40-60% cost savings while maintaining quality standards.",
+    "icon": "FiHeadphones"
+  },
+  {
+     "id": "startup-diagnostic",
+     "image_name": "div_8",
+    "title": "Startup Financial Health Check-up",
+    "description": "In-depth assessment of your startup's financial health and guidance.",
+    "subDescription": "Our startup diagnostic service evaluates your burn rate, revenue models, funding readiness, and financial controls. We provide actionable insights to optimize cash flow, improve valuation metrics, and prepare for successful funding rounds or profitability milestones.",
+    "icon": "FiActivity"
+  }
+]
