@@ -42,6 +42,11 @@ const Header = () => {
     };
   }, [lastScrollY]);
 
+  // Function to close mobile menu
+  const closeMobileMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header
       className={`bg-neutral-900 shadow-md fixed w-full top-0 z-50 transition-transform duration-300 ${
@@ -56,6 +61,7 @@ const Header = () => {
               <Link
                 to="/"
                 className="flex items-center hover:opacity-80 transition duration-300 hover:cursor-pointer"
+                onClick={closeMobileMenu}
               >
                 <img
                   src={PEG}
@@ -101,19 +107,39 @@ const Header = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4">
-            <Link to="/" className="block py-2 text-white hover:text-blue-600 transition duration-300">
+            <Link 
+              to="/" 
+              className="block py-2 text-white hover:text-blue-600 transition duration-300"
+              onClick={closeMobileMenu}
+            >
               Home
             </Link>
-            <Link to="/about" className="block py-2 text-white hover:text-blue-600 transition duration-300">
+            <Link 
+              to="/about" 
+              className="block py-2 text-white hover:text-blue-600 transition duration-300"
+              onClick={closeMobileMenu}
+            >
               About
             </Link>
-            <Link to="/services" className="block py-2 text-white hover:text-blue-600 transition duration-300">
+            <Link 
+              to="/services" 
+              className="block py-2 text-white hover:text-blue-600 transition duration-300"
+              onClick={closeMobileMenu}
+            >
               Services
             </Link>
-            <Link to="/contact" className="block py-2 text-white hover:text-blue-600 transition duration-300">
+            <Link 
+              to="/contact" 
+              className="block py-2 text-white hover:text-blue-600 transition duration-300"
+              onClick={closeMobileMenu}
+            >
               Contact
             </Link>
-            <Link to="/career" className="block py-2 text-white hover:text-blue-600 transition duration-300">
+            <Link 
+              to="/career" 
+              className="block py-2 text-white hover:text-blue-600 transition duration-300"
+              onClick={closeMobileMenu}
+            >
               Career
             </Link>
           </div>
