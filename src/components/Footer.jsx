@@ -352,7 +352,7 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Professional Edge Global. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link to="/terms" className="text-gray-400 hover:text-blue-400 text-sm transition duration-300">
+            <Link to="/terms-and-conditions" className="text-gray-400 hover:text-blue-400 text-sm transition duration-300">
               Terms of Service
             </Link>
             <Link to="/privacy-policy" className="text-gray-400 hover:text-blue-400 text-sm transition duration-300">
