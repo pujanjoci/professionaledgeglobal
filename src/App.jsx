@@ -9,14 +9,39 @@ import CareersPage from "./pages/Careers";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms.jsx";
 import CookiePolicy from "./pages/CookiePolicy.jsx";
-import ScrollToTop from "./components/ScrollToTop"; // Add this import
+import ScrollToTop from "./components/ScrollToTop";
 import "./index.css";
 
+// Flag to ensure console.log only happens once
+let hasLogged = false;
+
 function App() {
+  // Hidden console message (only visible when dev tools are open)
+  if (typeof window !== 'undefined' && !hasLogged) {
+    console.log(
+      `%cHey there curious developer! 👋\n` +
+      `%cIf you're seeing this, you're probably inspecting the code.\n` +
+      `Check out how this site was built on GitHub:\n` +
+      `https://github.com/pujanjoci\n\n` +
+      `%cPlease respect the intellectual property and don't copy without permission.`,
+      'color: #4CAF50; font-size: 14px; font-weight: bold;',
+      'color: #2196F3; font-size: 13px;',
+      'color: #F44336; font-size: 12px; font-style: italic;'
+    );
+    hasLogged = true;
+  }
+
   return (
     <BrowserRouter basename="/professionaledgeglobal">
       <div className="App">
-        <ScrollToTop /> {/* Add this component */}
+        {/* Hidden HTML element (invisible but appears in Elements tab) */}
+        <div 
+          style={{ display: 'none' }}
+          aria-hidden="true"
+          data-dev-message="This website was built by Pujan Joci. GitHub: github.com/pujanjoci - Please don't copy without permission."
+        />
+        
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />

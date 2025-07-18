@@ -1,0 +1,93 @@
+/* hero.css */
+
+/* Marquee/Ticker Animation */
+.hero-marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.5rem 0;
+  background-color: #cc13e5;
+  position: relative;
+}
+
+.hero-marquee-wrapper {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+}
+
+.hero-marquee-content {
+  display: inline-block;
+}
+
+.hero-marquee-wrapper:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.hero-marquee-item {
+  display: inline-block;
+  margin: 0 2rem;
+}
+
+/* Rest of your existing CSS */
+.hero-section {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  margin-top: 70px;
+}
+
+.hero-header {
+  width: 100%;
+  background-color: #12a70a;
+  text-align: center;
+  padding-top: 1.75rem;
+  padding: 0.5rem 1rem;
+}
+
+.hero-title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  padding-top: 0.5rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.hero-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 50px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transition: all 1000ms;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .hero-image {
+    max-height: none;
+  }
+}

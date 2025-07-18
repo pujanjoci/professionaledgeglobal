@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-
 import heroBg from '../assets/bg-1.jpg';
 import heroBg3 from '../assets/bg-3.jpg';
 import heroBg4 from '../assets/bg-4.jpg';
 import about from '../assets/About.png';
+import './hero.css';
 
 const HEADER_HEIGHT = 50;
-
 const backgrounds = [heroBg, about, heroBg3, heroBg4];
 
 const Hero = () => {
@@ -15,32 +14,38 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setBgIndex((prev) => (prev + 1) % backgrounds.length);
-    }, 5000); // 5 seconds
-
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
+  const marqueeItems = [
+    "🚀 New Training Classes have opened! Connect with us to Join Now",
+    "📈 Limited-time offer: Get 20% off on all consulting services this month",
+    "💼 Exclusive webinar: Digital Transformation Strategies on July 25th"
+  ];
+
   return (
-    <section
-      className="w-full font-poppins text-white"
-      style={{
-        marginTop: `${HEADER_HEIGHT}px`,
-      }}
-    >
-      {/* Top Section: Title and Subtitle */}
-      <div className="w-full bg-blue-900 text-center pt-7 px-4 py-2">
-        <h1 className="text-xl md:text-2xl pt-2 font-bold">
+    <section className="hero-section">
+      <div className="hero-header">
+        <h1 className="hero-title">
           Let's Unlock Your Business Edge – Connect Now
         </h1>
+        <div className="hero-marquee-container">
+          <div className="hero-marquee-wrapper">
+            <div className="hero-marquee-content">
+              {marqueeItems.map((item, index) => (
+                <span key={index} className="hero-marquee-item">{item}</span>
+              ))}
+              {/* Duplicate the items for seamless looping */}
+              {marqueeItems.map((item, index) => (
+                <span key={`duplicate-${index}`} className="hero-marquee-item">{item}</span>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
-
-      {/* Bottom Section: Rotating Background */}
-      <div className="w-full flex justify-center items-center relative overflow-hidden">
-        <img
-          src={backgrounds[bgIndex]}
-          alt="Hero"
-          className="w-full h-auto max-h-[calc(100vh-50px)] md:max-h-none shadow-lg transition-all duration-1000 object-cover"
-        />
+      <div className="hero-image-container">
+        <img src={backgrounds[bgIndex]} alt="Hero" className="hero-image" />
       </div>
     </section>
   );

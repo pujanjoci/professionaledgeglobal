@@ -74,8 +74,8 @@ const Home_Section = () => {
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <div key={service.id} className="relative"> {/* Changed key to service.id */}
+            {services.slice(0, 4).map((service, index) => (
+              <div key={service.id} className="relative">
                 {/* White icon box in top-right corner */}
                 <div className="absolute -top-2 -right-2 w-12 h-12 bg-white rounded-sm shadow-md flex items-center justify-center z-10">
                   {getIconComponent(service.icon)}
@@ -102,8 +102,8 @@ const Home_Section = () => {
                       <p className="text-gray-600 mb-4">{service.description}</p>
                     </div>
                     <div className="mt-auto">
-                      <Link // Changed from <a> to <Link>
-                        to={`/services/${service.id}`} // Now using service.id
+                      <Link
+                        to={`/services/${service.id}`}
                         className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center"
                       >
                         LEARN MORE
