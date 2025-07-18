@@ -19,8 +19,8 @@ function App() {
   // Hidden console message (only visible when dev tools are open)
   if (typeof window !== 'undefined' && !hasLogged) {
     console.log(
-      `%cHey there curious developer! 👋\n` +
-      `%cIf you're seeing this, you're probably inspecting the code.\n` +
+      `%cHello, Hi there.. 👋\n` +
+      `%cIf you're seeing this, you're probably inspecting the code. It is our curiosity so\n` +
       `Check out how this site was built on GitHub:\n` +
       `https://github.com/pujanjoci\n\n` +
       `%cPlease respect the intellectual property and don't copy without permission.`,
