@@ -23,7 +23,7 @@ function App() {
       `%cIf you're seeing this, you're probably inspecting the code. It is our curiosity so\n` +
       `Check out how this site was built on GitHub:\n` +
       `https://github.com/pujanjoci\n\n` +
-      `%cPlease respect the intellectual property and don't copy without permission.`,
+      `%cYou can always check the code and make changes according to your will. But after you star the repo.`,
       'color: #4CAF50; font-size: 14px; font-weight: bold;',
       'color: #2196F3; font-size: 13px;',
       'color: #F44336; font-size: 12px; font-style: italic;'
